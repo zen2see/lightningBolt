@@ -1,1 +1,267 @@
-The Lightning Bolt
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>the Lightning Bold & Encoding</title>
+  <!-- favicon.ico file sb 32x32 or 16x16 -->
+  <link rel="icon" type="x-icon" href="favicon.ico">
+  <!--https://www.w3schools.com/html/tryit.asp?filename=tryhtml_layout_flexbox-->
+  <!--https://www.w3schools.com/colors/colors_names.asp-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body::-webkit-scrollbar {
+      /* WebKit */
+      width: 0;
+      height: 0;
+    }
+
+    /* Style the header */
+    header {
+      background-color: midnightblue;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: goldenrod;
+    }
+
+    /* Container for flexboxes */
+    section {
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    /* Style the navigation menu */
+    nav {
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      background: #30307e;
+      padding: 20px;
+    }
+
+    /* Style the list inside the menu */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    /* Style the content */
+    article {
+      -webkit-flex: 4;
+      -ms-flex: 4;
+      flex: 4;
+      background-color: #FFE4B5;
+      padding: 20px;
+    }
+
+    /* Style the footer */
+    footer {
+      background-color: midnightblue;
+      padding: 35px;
+      text-align: center;
+      color: goldenrod;
+    }
+
+    /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+      section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+      }
+    }
+
+    a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: goldenrod;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: aliceblue;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    #soundbar {
+      text-align: center;
+      color: chartreuse;
+    }
+  </style>
+</head>
+
+<body style='margin: 0px'>
+  <div>
+    <header>
+      <h2><span color='yellow'>&#x1F5F2</span> THE LIGHTNING BOLT &#x1F5F2</h2>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li><a href='https://www.suse.com/c/making-sense-hexdump/'>More on hexdump</a></li>
+          <li><a href='https://medium.com/@laura.derohan/compiling-c-files-with-gcc-step-by-step-8e78318052'>Intro to
+              gcc</a></li>
+          <li><a href='https://www.geeksforgeeks.org/curl-command-in-linux-with-examples/'>Curl commands</a></li>
+          <li><a href='https://www.prosettings.com/emoji-list/'>Emoji List 2024</a></li>
+        </ul>
+        <hr>
+        <div id="soundbar">
+          <p>Play a sound from practice Jan 14, 2023</p>
+          <audio controls>
+            <source src="Practice011423.m4a" type="audio/mpeg">
+            <source src="Practice011423.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+          </audio>
+        </dvi>
+      </nav>
+      <br />
+      <article>
+        &#128498; OR &#x1F5F2; (see this <b>source code</b> for these <b>DECIMAL & HEX HTML Entity values</b>.)
+        <br />
+        <p>
+          <b>UTF-8 Encoding in hex 0xF0 0x9F 0x97 0xB2</b>
+        </p>
+        <b>ON LINUX TERMINAL:</b>
+        <br />
+        <b>printf '\xF0\x9F\x97\xB2\n'</b> <br />
+        <br />
+        You can also paste (CTRL+V) the actual icon in the terminal and have hexdump show the hex values: <br />
+        <b>printf (CTRL+V) | hexdump </b>
+        after pasting the icon, you PIPE (|) it to the hexdump program which will display the code.
+        <br />
+        <br />
+        You can paste the lightning icon OR put the actual hex code before the PIPE (|) to hexdump:
+        <br />
+        <b>
+          printf (CTRL+V) | hexdump <br />
+          printf '\xF0\x9F\x97\xB2' | hexdump
+        </b>
+        <br />
+        It's the same hex code for the lightning bolt &#x1F5F2:
+        <br />
+        <b>
+          0000000 9ff0 b297 <br />
+          0000004 
+        </b>
+        <br />
+        <br />
+        You can printf OR echo unicode code before the PIPE (|) to hexdump:
+        <br />
+        <b>
+          printf '\u26A1\n' | hexdump <br />
+          echo -e '\u26A1' | hexdump
+        </b>
+        <br />
+        It's the same hex code for the High Voltage Sign this time:
+        <br />
+        <b>
+          0000000 9ae2 0aa1 <br />
+          0000003
+        </b>
+        <br />
+        <b>echo -e '\u26A1'</b> the <b>-e</b> allows Various Escape characters like <b>\u</b> to format your argument.
+        <br />
+        <b><i>\u26A1 is actually the High Voltage Sign.</i></b> &#x26a1;
+        <br />
+        <br />
+        <b> URLENCODE / DECODE </b>
+        <br />
+        <b>urlencode [-m|-d] string [string ...]</b>
+        <br />
+        <b>-m</b>
+        Instead of full conversion, do GridSite: <b>"mild URL encoding"</b> <br />
+        in which <b>A-Z a-z 0-9 . = - _ @ and / are passed through unmodified.</b> <br />
+        This results in slightly more human-readable strings but the application <br />
+        must be prepared to <i>create or simulate the directories implied by any slashes.</i> <br />
+        <b>-d</b>
+        Do URL <b>decoding</b> rather than encoding, according to RFC 1738. %HH and %hh strings are <br />
+        converted and other characters are passed through unmodified, with the exception that
+        + is converted to space. <br />
+        <i>For example, the URL http://www.gridpp.ac.uk/ becomes, <b>http%3A%2F%2Fwww.gridpp.ac.uk%2F</b></i> <br />
+        <b>urlencode & = %26</b><br />
+        <b>urlencode -d %26 = &</b><br />
+        <br />
+        <b>ON LINUX TERMINAL:</b>
+        <br />
+        The format of the string for <b><i>foreground color</i></b> is:
+        <br />
+        <b>
+          "\033[ + color code + 0 or 1 (meaning normal or bold) + m"
+        </b>
+        <br />
+        and for <b><i>background</i></b> is:
+        <br />
+        <b>
+          "\033[ + color code + m"
+        </b>
+        <br />
+        A simple example of red text:
+        <br />
+        <b>
+          printf "\033[91mThis is red text"
+        </b>
+        <br />
+        An example of red text on a white background:
+        <br />
+        <b>
+          printf "\033[91m\033[107mThis is red text on a white background"
+        </b>
+        <br />
+        <br />
+        <b> TERMINAL COLORS </b> <br />
+        Default \033[39m \033[49m <br />
+        Black \033[30m \033[40m <br />
+        Dark red \033[31m \033[41m <br />
+        Dark green \033[32m \033[42m <br />
+        Dark yellow \033[33m \033[43m <br />
+        Dark blue \033[34m \033[44m <br />
+        Dark magenta \033[35m \033[45m <br />
+        Dark cyan \033[36m \033[46m <br />
+        Light gray \033[37m \033[47m <br />
+        Dark gray \033[90m \033[100m <br />
+        Red \033[91m \033[101m <br />
+        Green \033[92m \033[101m <br />
+        Orange \033[93m \033[103m <br />
+        Blue \033[94m \033[104m <br />
+        Magenta \033[95m \033[105m <br />
+        Cyan \033[96m \033[106m <br />
+        White \033[97m \033[107m <br />
+        and the reset code is \033[0m <br />
+      </article>
+    </section>
+
+    <footer>
+      <p><b>END OF HTML</b></p>
+      <small>
+        Written by <a href="mailto:zen2see@gmail.com">zen2see@gmail.com</a>
+      </small>
+      <div>
+        <sub>
+          &#xa9; 2024 Zen2See, LLC 
+          <!-- &#x2122 = trademark symbol -->
+        </sub>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
